@@ -22,7 +22,7 @@ function Get-ClickUpFolders {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true)]
-        [int]$SpaceID,
+        [double]$SpaceID,
         [Parameter()]
         [bool]$Archived = $false
     )
@@ -84,7 +84,7 @@ function New-ClickUpFolder {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true)]
-        [int]$SpaceID,
+        [double]$SpaceID,
         [Parameter(Mandatory = $true)]
         [int]$Name
     )
