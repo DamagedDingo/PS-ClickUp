@@ -22,7 +22,7 @@ function Get-ClickUpSpaces {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true)]
-        [int]$TeamID,
+        [double]$TeamID,
         [Parameter()]
         [bool]$Archived = $false
     )
@@ -56,7 +56,7 @@ function Get-ClickUpSpace {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true)]
-        [int]$SpaceID
+        [double]$SpaceID
     )
     $Space = Invoke-ClickUpAPIGet -Endpoint "space/$SpaceID"
     Return $Space
@@ -83,7 +83,7 @@ function New-ClickUpSpace {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true)]
-        [int]$TeamID,
+        [double]$TeamID,
         [Parameter(Mandatory = $true)]
         [string]$Name,
         [bool]$Multiple_Assignees = $true,
