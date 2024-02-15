@@ -71,11 +71,11 @@ function Get-ClickUpTasks {
 
         [Parameter(ParameterSetName = 'ListID')]
         [Parameter(ParameterSetName = 'TeamID')]
-        [datetime]$DueDateGreaterThan,
+        [int64]$DueDateGreaterThan,
 
         [Parameter(ParameterSetName = 'ListID')]
         [Parameter(ParameterSetName = 'TeamID')]
-        [datetime]$DueDateLessThan,
+        [int64]$DueDateLessThan,
 
         [Parameter(ParameterSetName = 'ListID')]
         [Parameter(ParameterSetName = 'TeamID')]
@@ -325,7 +325,7 @@ function New-ClickUpTask {
     [CmdletBinding()]
     param (
         [Parameter(Mandatory = $true)]
-        [int]$ListID,
+        [double]$ListID,
         [Parameter(Mandatory = $true)]
         [string]$Name,
         [string]$Description,
@@ -333,10 +333,10 @@ function New-ClickUpTask {
         [string[]]$Tags,
         [string]$Status,
         [int]$Priority,
-        [datetime]$DueDate,
+        [int64]$DueDate,
         [bool]$DueDateTime = $false,
         [int]$TimeEstimate,
-        [datetime]$StartDate,
+        [int64]$StartDate,
         [bool]$StartDateTime = $false,
         [bool]$NotifyAll,
         [string]$Parent,
